@@ -51,7 +51,17 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <!--<h2>Latest work</h2>-->
-                    <p class="lead">Graduating April 2017<p>
+                    <p class="lead">
+                        I received my B.S. in Computer Engineering from Brigham Young University in April, 2017. 
+                    </p>
+                    <p class="lead">
+                        I am now pursuing an M.S. in Computer Engineering from Arizona State University. 
+                        My research interests primarily lie in Mobile Computing, Multi-Agent 
+                        Systems, Fog Networks, and Autonomous Vision-based Systems.
+                    <p>
+                    <p class="lead">
+                        I currently work in the <a href="http://informationnet.asu.edu/index.html">Information Networks</a> Group with Dr. Junshan Zhang.
+                    </p>
                 </div>
             </div>
             <!-- /.row -->
@@ -71,19 +81,6 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>CURRENT PROJECT</strong>
-                                </h4>
-                                <p>What's cooking?</p>
-                                <a target="_blank" href="https://beta.xion.store" class="btn btn-light">View</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-user fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
@@ -96,13 +93,26 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>CURRENT PROJECT</strong>
+                                </h4>
+                                <p>A library management app.</p>
+                                <a target="_blank" href="https://github.com/azjkjensen/my-library" class="btn btn-light">View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
                                 <i class="fa fa-github fa-stack-2x"></i>
                                 <!--<i class="fa fa-github fa-stack-1x text-primary"></i>-->
                             </span>
                                 <h4>
                                     <strong>CODE</strong>
                                 </h4>
-                                <p>Can you dig it?</p>
+                                <p>inspectMe()</p>
                                 <a target="_blank" href="https://github.com/azjkjensen" class="btn btn-light">View</a>
                             </div>
                         </div>
@@ -125,7 +135,11 @@
                     </h4>
                     <p>Provo, UT 84606</p>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (480) 200-3373</li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <div id="phone-number-show" onclick="showPhoneNumber()">click to show</div>
+                            <div id="phone-number">(480) 200-3373</div>
+                        </li>
                         <li><i class="fa fa-envelope-o fa-fw"></i> <a target="_blank" href="mailto:azjkjensen@gmail.com">azjkjensen@gmail.com</a>
                         </li>
                     </ul>
@@ -138,7 +152,7 @@
                             <a target="_blank" href="https://twitter.com/azjkjensen"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://instagram.com/jk_jensen"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                            <a target="_blank" href="https://instagram.com/lovedonesandzeros"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
                         </li>
                         <li>
                             <a target="_blank" href="https://linkedin.com/in/jordankylejensen"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
@@ -160,6 +174,54 @@
 
     <!-- Custom JavaScript -->
     <script>
+
+    const showPhoneNumber = ()=>{
+        // console.log();
+        document.getElementById('phone-number-show').style.display = 'none';
+        document.getElementById('phone-number').style.display = 'inline-block';
+    }
+    setInterval(() =>{
+        document.getElementById('phone-number-show').animate([
+            {
+                offset: 0,
+                transform: 'none'
+            },
+            {
+                offset: 0.5,
+                transform: 'rotateZ(-20deg) scale(1.2)'
+            },
+            {
+                offset: 0.6,
+                transform: 'rotateZ(25deg) scale(1.2)'
+            },
+            {
+                offset: 0.675,
+                transform: 'rotateZ(-15deg) scale(1.2)'
+            },
+            {
+                offset: 0.75,
+                transform: 'rotateZ(15deg) scale(1.2)'
+            },
+            {
+                offset: .825,
+                transform: 'rotateZ(-12deg) scale(1.2)'
+            },
+            {
+                offset: 0.85,
+                transform: 'rotateZ(0) scale(1.2)'
+            },
+            {
+                offset: 1,
+                transform: 'rotateZ(0) scale(1)'
+            }
+        ],
+        {
+            duration: 800,
+            iterations: 1,
+            easing: 'ease-out',
+        });
+    },4000);
+
     // Scrolls to the selected menu item on the page
     $(function() {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {

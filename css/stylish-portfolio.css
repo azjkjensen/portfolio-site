@@ -330,3 +330,17 @@ footer {
 .contact-list{
     padding: 30px;
 }
+
+#phone-number-show {
+    padding: 4px;
+    bottom: 4px;
+    position: relative;
+    display: inline-block;
+}
+
+#phone-number{
+    padding: 4px;
+    bottom: 4px;
+    position: relative;
+    display: none;
+}
